@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="register.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	// Fullname validation
+	$(document).ready(function(){
+		$('#fname').keyup(function(){
+			// var regexp = new REgexp(/^[a-zA-Z]+$/);
+			var regexp = /^[a-zA-Z]+$/;
+			if(regexp.test($('#fname').val())) {
+				$('#fname').closest(.'form-group').addclass('has-success');
+			}
+			else {
+				$('#fname').closest(.'form-group').addclass('has-error');
+			}
+		})
+	}) 
+//Mobile validation
+$(document).ready(function(){
+		$('#fname').keyup(function(){
+			// var regexp = new REgexp(/^[a-zA-Z]+$/);
+			var regexp = /^[0-9]{10}$/;
+			if(regexp.test($('#Mobile').val())) {
+				$('#Mobile').closest(.'form-group').addclass('has-success');
+			}
+			else {
+				$('#Mobile').closest(.'form-group').addclass('has-error');
+			}
+		})
+	}) 
+//Email validation
+$(document).ready(function(){
+		$('#Email').keyup(function(){
+			// var regexp = new REgexp(/^[a-zA-Z]+$/);
+			var regexp = /^[a-zA-Z0-9._]+@[a-zA-Z0-9._]+\.[a-zA-Z0-9._]{2,4}$/;
+			if(regexp.test($('#Email').val())) {
+				$('#Email').closest(.'form-group').addclass('has-success');
+			}
+			else {
+				$('#Email').closest(.'form-group').addclass('has-error');
+			}
+		})
+	}) 
+//Password validation
+$(document).ready(function(){
+		$('#password ').keyup(function(){
+			// var regexp = new REgexp(/^[a-zA-Z]+$/);
+			var regexp = /^[a-zA-Z0-9._]{6,50}$/;
+			if(regexp.test($('#password ').val())) {
+				$('#password ').closest(.'form-group').addclass('has-success');
+			}
+			else {
+				$('#password ').closest(.'form-group').addclass('has-error');
+			}
+		})
+	}) 
+
+
+
+
+//comform Password validation
+$(document).ready(function(){
+		$('#Comform Password' ).keyup(function(){
+			// var regexp = new REgexp(/^[a-zA-Z]+$/);
+			var regexp = /^[a-zA-Z0-9._]{6,50}$/;
+			if(regexp.test($('#Comform Password' ).val())) {
+				if ($('#Comform Password').val() == $('#Password').val()) {
+					$('#Comform Password' ).closest(.'form-group').addclass('has-error');
+					$('#Comform Password' ).closest(.'form-group').addclass('has-success');
+
+				}
+				else{
+					$('#Comform Password' ).closest(.'form-group').addclass('has-error');
+				}
+				
+			}
+			else {
+				$('#Comform Password' ).closest(.'form-group').addclass('has-error');
+			}
+		})
+	})  
+
+
+
+</script>
+</head>
+<body>
+
+<div class="container">
+		<h2 class="text-center"> Sign up,sign in, forgot password</h2>
+		<h3 class="text-center">Form Validation using regular expression</h3>
+<hr>
+
+<div class="row">
+	
+	
+	<div class="panel">
+		<div class="panel-heading">
+			<h3 class="panel-title text-center">SIGN UP FORM</h3>
+		</div>
+
+		<div class="panel-body">
+
+			<form id="sign-up-frm" role="form" method="post" action="" class="form-horizontal">
+				
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon addon-diff-color">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+						<input type="text" class="form-control" id="fname" name="fname" placeholder="Full Name">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon addon-diff-color">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+						<input type="text" class="form-control" id="mobe" name="mobe" placeholder="Mobile Number">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon addon-diff-color">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+						<input type="text" class="form-control" id="mail" name="mail" placeholder="Email">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon addon-diff-color">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+						<input type="text" class="form-control" id="pass" name="pass" placeholder="Password">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="input-group">
+						<div class="input-group-addon addon-diff-color">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+						<input type="text" class="form-control" id="cpass" name="cpass" placeholder="Comform Password">
+
+
+					</div>
+				</div>
+			</form>
+
+			<button class="register" type="button" name="button" value=" Register" >REGISTER</button>
+		</div>
+	</div>
+</div>
+
+
+</div>
+  
+</div>
+
+
+</body>
+</html>

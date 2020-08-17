@@ -1,0 +1,50 @@
+.head{
+		color: white;
+		text-align: center;
+	}
+	
+	.div4{
+		height: 70PX;
+		width: 100%;
+		border: 1px solid;
+		border-color: orange;
+		text-align: center;
+		color: white;
+		background-color: #3cb371;
+		clear: left;
+	}
+	.img{
+		width: 100%;
+	}
+	
+	h2{
+		font-style: oblique;
+	}
+	.div1{
+		background-color: #3cb371;
+		height: 100px; 
+		width: 100%;
+		padding: 15px;
+	}
+	.div2{
+
+	}
+	input{
+		border-right-color: #3cb371;
+		border-left-color: #3cb371;
+		border-top-color: orange;
+	}
+		ul li{
+			
+			background-color:lightgray;
+			color: white;
+			}
+			label{
+				font-size: 10px
+
+			}
+			#value{
+		   width: 65%;
+		   height:30px;
+		   padding: -20px;
+			}
